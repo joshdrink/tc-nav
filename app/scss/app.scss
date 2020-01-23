@@ -164,6 +164,10 @@ $clone-grid-columns: 12;
 
 [data-clone] {
     // Your custom CSS goes here.
+    .goc-link {
+        display: block;
+        width: 17rem;
+    }
     .pg-hero {
         align-items: center;
         display: flex;

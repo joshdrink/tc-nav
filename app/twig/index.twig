@@ -10,9 +10,9 @@
         {# Viewport #}
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {# Generic Google Fonts #}
-        <link href="https://fonts.googleapis.com/css?family=Euphoria+Script|Open+Sans:400,400i,600,600i,800,800i&amp;subset=latin-ext" rel="stylesheet">
+        {# <link href="https://fonts.googleapis.com/css?family=Euphoria+Script|Open+Sans:400,400i,600,600i,800,800i&amp;subset=latin-ext" rel="stylesheet"> #}
         {# Material Icons #}
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        {# <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> #}
         {# Your CSS #}
         <link async href="$ROOT/css/app.css" rel="stylesheet">
         {# Favicons #}
@@ -25,7 +25,58 @@
         <meta name="theme-color" content="#b91d47">
     </head>
     {# Playground's Body #}
-    <body data-clone>
+    <body data-clone data-c-menu-style="topbar(sticky)">
+        <!-- This is the button that opens the menu on mobile devices. -->
+        <button 
+            type="button"
+            data-c-button="solid(c5)"
+            data-c-menu-mobile-trigger
+            role="button"
+            aria-label="This button opens the main navigation menu."
+            aria-pressed="false">
+            <span>Open</span><span>Close</span> Menu
+        </button>
+        <!-- This is the menu proper. Note the data-c-menu property. -->
+        <nav data-c-menu data-c-container="large">
+            <ul>
+                <li>
+                    <!-- The parent menu item. -->
+                    <p><img src="$ROOT/img/users-solid.svg" alt=""><span>Applicant Portal</span></p>
+                    <!-- The submenu trigger. Note the data-c-add/remove properties. -->
+                    <button data-c-menu-submenu-trigger>
+                        <i data-c-menu-add><img src="$ROOT/img/plus-solid.svg" alt=""></i>
+                        <i data-c-menu-remove><img src="$ROOT/img/minus-solid.svg" alt=""></i>
+                    </button>
+                    <!-- The submenu. -->
+                    <ul>
+                        <li><a href="" title=""><img src="$ROOT/img/users-solid.svg" alt="">Applicant Portal</a></li>
+                        <li><a href="" title=""><img src="$ROOT/img/address-card-solid.svg" alt="">Hiring Manager Portal</a></li>
+                        <li><a href="" title=""><img src="$ROOT/img/tasks-solid.svg" alt="">HR Adviser Portal</a></li>
+                    </ul>
+                </li>
+                <li><a href="" title="">Home</a></li>
+                <li><a href="" title="">Browse Jobs</a></li>
+                <li><a href="" title="">Indigenous Talent</a></li>
+                <li><a href="" title="">FAQ</a></li>
+                <li>
+                    <!-- The parent menu item. -->
+                    <a href="" title="">Jerbo</a>
+                    <!-- The submenu trigger. Note the data-c-add/remove properties. -->
+                    <button data-c-menu-submenu-trigger>
+                        <i data-c-menu-add><img src="$ROOT/img/plus-solid.svg" alt=""></i>
+                        <i data-c-menu-remove><img src="$ROOT/img/minus-solid.svg" alt=""></i>
+                    </button>
+                    <!-- The submenu. -->
+                    <ul>
+                        <li><a href="" title="">My Applications</a></li>
+                        <li><a href="" title="">My Experience</a></li>
+                        <li><a href="" title="">My References</a></li>
+                        <li><a href="" title="">Settings</a></li>
+                        <li><a href="" title="">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
         <div class="pg-hero">
             <div data-c-radius="rounded">
                 <div data-c-background="black(100)" data-c-color="white" data-c-padding="all(2)">
